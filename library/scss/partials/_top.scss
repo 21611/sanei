@@ -1,0 +1,25 @@
+.top{
+	&-container{
+	font-size: 10px;
+	}
+	&-left{
+		@extend .m-all;
+		@extend .d-1of2;
+
+		height:100%;
+		background-color: red;
+
+	}
+	&-right{
+		@extend .m-all;
+		@extend .d-1of2;
+
+		height:100%;
+		background-color: blue;
+
+
+	}
+
+
+}
+
