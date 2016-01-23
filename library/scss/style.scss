@@ -23,6 +23,9 @@ our mixins, functions, and variables that we'll be using across
 the whole project.
 *********************/
 
+
+@import "compass";
+
 // normalize: http://necolas.github.io/normalize.css/
 @import "partials/normalize";
 

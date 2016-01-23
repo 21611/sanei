@@ -7,18 +7,25 @@ Template Name:top
 
 
 
+	
+
+
+
+
 <?php get_header(); ?>
 
 
 
-
+<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 <div class="top-container">
+
+
 	
 
-<div class="top-left">テスト</div>
+<div class="top-left"></div>
 
 
-<div class="top-right">test</div>
+<div class="top-right"></div>
 
 
 
