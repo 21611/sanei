@@ -4,7 +4,7 @@ var gulp  = require('gulp'),
     compass = require('gulp-compass');
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
-    browserSync = require('browser-sync'); //リロード
+  
     jshint = require('gulp-jshint'), //構文チェック
     stylish = require('jshint-stylish'), //をスタイリッシュに
     uglify = require('gulp-uglify'), //圧縮
@@ -72,31 +72,20 @@ gulp.task('scripts', function() {
 
 
 
-//sync
-gulp.task('browser-sync', function () {
-    browserSync({
-        proxy: "http://192.168.33.10/"
-    });
-});
-
-gulp.task('bs-reload', function () {
-    browserSync.reload();
-});
 
 
 
 
 
-gulp.task('default', ['browser-sync'], function () {
+gulp.task('default', function () {
 
 
 // Watch .scss files
   gulp.watch('./library/scss/**/*.scss', ['styles']);
-gulp.watch('./library/scss/**/*.scss', ['bs-reload']);
+
   // Watch site-js files
   gulp.watch('./library/js/*.js', ['scripts']);
-  gulp.watch(['*.php'], ['bs-reload']);
-  gulp.watch(['./library/images/**/*'], ['bs-reload']);
+
 
 });
 
