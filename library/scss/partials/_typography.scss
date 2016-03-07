@@ -82,3 +82,61 @@ p {
           font-feature-settings: "liga", "dlig";
 }
 
+@font-face {
+    font-family: 'M+ 1p light';
+    src: url('../css/fonts/mplus-1p-light-sub.eot');
+    src: url('../css/fonts/mplus-1p-light-sub.eot?#iefix') format('embedded-opentype'),
+    url('../css/fonts/mplus-1p-light-sub.woff') format('woff'),
+    url('../css/fonts/mplus-1p-light-sub.ttf') format('truetype');
+}
+
+body {
+    font-family: 'M+ 1p light';
+}
+
+
+.entry-header h1{
+  font-size: 2em;
+}
+
+
+@font-face {
+    font-family: 'M+ 2p regular';
+    src: url('../css/fonts/mplus-2p-regular-sub.eot');
+    src: url('../css/fonts/mplus-2p-regular-sub.eot?#iefix') format('embedded-opentype'),
+    url('../css/fonts/mplus-2p-regular-sub.woff') format('woff'),
+    url('../css/fonts/mplus-2p-regular-sub.ttf') format('truetype');
+}
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300italic);
+
+
+@font-face {
+  font-family: "title-thin";
+    src: url("../css/fonts/FiraSans-Thin.ttf");
+  }
+
+
+@font-face {
+  font-family: "title";
+    src: url("../css/fonts/FiraSans-Regular.ttf");
+  }
+
+
+@font-face {
+  font-family: "title2";
+    src: url("../css/fonts/Mellow.otf");
+  }
+
+
+@font-face {
+  font-family: "title3";
+    src: url("../css/fonts/Homestead-Display.ttf");
+  }
+

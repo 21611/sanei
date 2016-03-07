@@ -1,0 +1,165 @@
+.news{
+  &_wp{
+    background-color: white;
+  }
+  &-container{
+    @extend .m-all;
+    @extend .t-all;
+    @extend .d-all;
+    @extend .cf;
+
+  }
+  &-top{
+    @include background(image-url("company-top.jpg"));
+    @include background-size(cover);
+   min-height: 380px;
+    background-position-y:-10px;
+    @include mqXS{
+      min-height: 250px;
+    }
+    @include mqLG{
+      background-position-y:-220px;
+    
+    }
+    @include mqLG-more{
+      min-height:300px;
+      background-position-y: -260px;
+    }
+
+
+
+    &__nav{
+     @include nav;
+     @include justify-content(flex-start);
+
+      &-logo{
+        @include nav-contents;
+        width: 60%;
+        margin-left: 5%;
+      }
+      &-img{
+        width:180px;
+        height:55px;
+        @include mqXS{
+          width:100px;
+        }
+      }
+      &-link{
+        @include nav-contents;
+        @include mqXS{
+          width:45%;
+          text-align: center;
+        }
+          &:hover{
+       -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+          background-color: rgba(147, 198, 234, 0.87);
+          color:white;
+          padding:0 2%;
+          margin:0 2%;
+          
+        }
+
+      }
+      &-links{
+         @include nav;
+         width:30%;
+         @include mqXS{
+          width:60%;
+         }
+      }
+      &-bg{
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        background-color: white;
+        width:100%;
+        @include display-flex;
+        @include justify-content(space-around);
+        @include border-radius(3px);
+        padding: 2% 0;
+        @include flex-wrap(wrap);
+        @include mqXS{
+          margin: 0 8% 0 0;
+          padding: 3% 0 3% 10%;
+        }
+
+
+      }
+
+
+    }// end of nav
+  }// end of top
+  &-profile{
+    &__title{
+      &-ct{
+        @extend .title-default-ct;
+      }
+      &-en{
+        @extend .title-default-en;
+
+      }
+      &-jp{
+        @extend .title-default-jp;
+      }
+    }
+
+  }
+
+  &-contents{
+    &__ct{
+    margin: 5% 0;
+    }
+    &__box{
+      width:90%;
+      margin: 0 auto;
+      @extend .cf;
+    }
+    &__time{
+    @extend .m-all;
+    @extend .t-1of3;
+    @extend .d-1of3;
+    @extend .cf;
+    @include mqXS{
+    padding: 0 0 0 0;
+    text-align: left;
+    margin: 0 0 0 0;
+    }
+    padding: 0 5% 0 0;
+    text-align: right;
+    margin: 1% 0 0 0;
+
+    }
+    &__title{
+    @extend .m-all;
+    @extend .t-2of3;
+    @extend .d-2of3;
+    @extend .cf;
+    margin: 1% 0 0 0;
+
+    @include mqXS{
+      margin: 1% 0 3% 0;
+    }
+    }
+  }
+
+  &-entry{
+    &__title{
+      margin:0 ;
+      @include mqXS{
+        font-size: 20px;
+      }
+    }
+  }
+  &-nav{
+    background-color: white;
+    & .footer-nav{
+    
+    padding: 3% 0 1% 0;
+    @include border-radius(30px);
+    }
+  }
+
+}
+

@@ -1,0 +1,25 @@
+
+    .title-default{
+      &-ct{
+      width:70%;
+      background-color: #f3f3f3;
+      text-align: center;
+      margin: 5% auto 6% auto;
+    
+      padding: 1% 0;
+      }
+      &-en{
+       font-size: 36px;
+       font-family: "title-thin";
+       color:$text;
+
+      }
+      &-jp{
+        font-size: 18px;
+        color:#000000;
+        &:before{
+          content: "\A";
+          white-space: pre;
+        }
+      }
+    }

@@ -1,0 +1,271 @@
+
+.product{
+	&__ct{
+		@extend .m-all;
+    @extend .t-all;
+    @extend .d-all;
+    @extend .cf;
+    background-color: white;
+	}
+
+ &-top{
+ 
+    @include background(image-url("producttokyo-top.jpg"));
+    @include background-size(cover);
+    min-height: 350px;
+    @include mqXS{
+      min-height: 250px;
+    }
+
+    &-kyoto{
+    @include background(image-url("topkiri.jpg"));
+    @include background-size(cover);
+    min-height: 350px;
+    @include mqXS{
+      min-height: 250px;
+    }
+
+
+
+
+    }
+    &__nav{
+     @include nav;
+     @include justify-content(flex-start);
+
+      &-logo{
+        @include nav-contents;
+        width: 60%;
+        margin-left: 5%;
+      }
+      &-img{
+        width:180px;
+        @include mqXS{
+          width:100px;
+        }
+      }
+      &-link{
+        @include nav-contents;
+        @include mqXS{
+          width:45%;
+          text-align: center;
+
+        }
+          &:hover{
+       -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+          background-color: rgba(147, 198, 234, 0.87);
+          color:white;
+          padding:0 2%;
+          margin:0 2%;
+          
+        }
+
+      }
+      &-links{
+         @include nav;
+         width:30%;
+         @include mqXS{
+          width:60%;
+         }
+      }
+      &-bg{
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        background-color: white;
+        width:100%;
+        @include display-flex;
+        @include justify-content(space-around);
+        @include border-radius(3px);
+        padding: 2% 0;
+        @include flex-wrap(wrap);
+        @include mqXS{
+          margin: 0 8% 0 0;
+          padding: 3% 0 3% 10%;
+        }
+
+
+      }
+
+
+    }// end of nav
+  }// end of top
+
+
+  &-title{
+    &__ct{
+
+        @include display-flex;
+
+    }
+
+    &__title{
+        @extend .title-default-ct;
+        width:50%;
+        padding: 30px 0;
+        margin:0 0 0 0;
+
+      &-en{
+        @extend .title-default-en;
+        @include mqXS{
+          font-size: 26px;
+        }
+      }
+      &-jp{
+        @extend .title-default-jp;
+      }
+    }//end of __title
+    &__contact{
+      width:50%;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 200;
+
+      &-text{
+        margin: 5% 0 0 0;
+        padding-bottom: 3%;
+        font-size: 1.6rem;
+        color: black;
+        @include mqXS{
+          font-size: 16px;
+        }
+      }
+      &-tel{
+        & i{
+          margin-right: 1%;
+        }
+
+      }
+      &-email{
+               @include mqXS{
+          font-size: 16px;
+        }
+        & i{
+          margin-right: 1%;
+        }
+
+      }
+    }
+  }// end of -title
+  &-kyoto{
+    &_content-img{
+    @extend .m-all;
+    @extend .t-all;
+    @extend .d-all;
+    @extend .cf;
+      & img{
+        margin: 0 auto;
+        display:block;
+      }
+    }
+    &_content-hako{
+    @extend .m-all;
+    @extend .t-all;
+    @extend .d-all;
+    @extend .cf;
+    margin: 0 auto;
+    text-align: center;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid__item{
+      border: solid 5px #f3f3f3;
+  @include mqXS{
+           height: 450px;
+  }
+}
+
+.card-img{
+	&__ct{
+height:100%;
+width:100%;
+	}
+	&__img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+	}
+}
+
+
+.scroll-wrap{
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+        background-color: white;
+        top: -30%;
+        @include mqXS{
+          top:0;
+          position: fixed;
+        }
+
+}
+.close-button{
+      top: 0 !important;
+      position:fixed;
+       @include mqXS{
+          top:0;
+          position: fixed;
+        }
+
+
+}
+
+.content{
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  top: 0 !important;
+  position:fixed;
+
+  &__ct{
+    @include display-flex;
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
+  }
+  & img{
+    width:40%;
+    height:auto;
+    @include mqXS{
+      width:100%;
+      height:100%;
+    }
+  }
+  &__text{
+    width:50%;
+    margin: 10% 0 0 10%;
+    @include mqXS{
+      width:100%;
+      height:100%;
+    }
+    &__item{
+      position:fixed;
+    }
+
+  }
+
+}

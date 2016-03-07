@@ -1,0 +1,207 @@
+.top{
+	&-container{
+	font-size: 10px;
+	height:100%;
+  max-width: 1200px;
+  margin: 0 auto;
+	}
+	&-left{
+		@extend .m-all;
+		@extend .d-1of2;
+    @extend .t-1of2;
+					
+		height:70vh;
+		@include background(image-url("top-left.jpg"));
+		@include background-size(cover);
+		@include mqXS{
+      margin-bottom: -20%;
+      margin-top: -20%;
+
+		}
+		&:hover{
+
+			z-index:10;
+			 opacity: 0.8;
+
+		}
+		&__bg{
+			background-color: $blue;
+			width: 100%;
+			height:70vh;
+			opacity:0;
+			-webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      display:block;
+      		@include mqXS{
+      			height:40vh;
+      		}
+			&:hover{
+				opacity: 0.3;
+			}
+			& a{
+				width:100%;
+				height:100%;
+			}
+		}
+
+	}
+	&-right{
+		@extend .m-all;
+		@extend .d-1of2;
+    @extend .t-1of2;
+		@include background(image-url("top-right.jpg"));
+		@include background-size(cover);
+
+		height:70vh;
+				@include mqXS{
+          margin-bottom: -20%;
+				}
+&__bg{
+			background-color: $pink;
+			width: 100%;
+			height:70vh;
+			opacity:0;
+			-webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      display:block;
+      		@include mqXS{
+      			height:50vh;
+      		}
+			&:hover{
+				opacity: 0.3;
+			}
+		}
+
+	} // end of right
+
+
+	&-text{
+		&__ct{
+			text-align: center;
+			font-size: 1.8rem;
+			font-weight: 200;
+			clear: both;
+			padding: 2% 0 2% 0;
+			background-color: white;
+					@include mqXS{
+						font-size: 1.1rem;
+            padding: 22% 0 5% 0;
+					}
+		}
+	}// end of text
+
+
+    &__nav{
+    	background-color: white;
+     @include nav;
+     @include justify-content(flex-start);
+     -webkit-flex-wrap:wrap;/*--- safari（PC）用 ---*/
+    flex-wrap:wrap;
+      &-logo{
+        @include nav-contents;
+        width: 20%;
+        margin-left: 5%;
+        @include mqXS{
+        	width:100%;
+          display:none;
+        }
+        &-mobile{
+          display:none;
+          @include mqXS{
+            display:block; 
+            margin:3% auto;
+            text-align: center;
+          }
+        }
+      }
+      &-news{
+      	width:40%;
+      	font-size: 1rem;
+      	font-weight: 100;
+      	padding: 0 0 0 3%;
+      	 @include mqXS{
+        	width:100%;
+          margin: 5% auto 5% 5%;
+
+        }
+
+
+      }
+      &-img{
+        width:150px;
+        @include mqXS{
+          width:100px;
+        }
+      }//end of img
+      &-link{
+        @include nav-contents;
+        @include mqXS{
+          width:45%;
+          text-align: center;
+        }
+          &:hover{
+       -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+          background-color: rgba(147, 198, 234, 0.87);
+          color:white;
+          padding:0 2%;
+          margin:0 2%;
+        }
+
+      }//end of link
+		      &-links{
+         @include nav;
+         width:30%;
+         @include mqXS{
+          width:100%;
+         }
+      }// end of links
+      &-bg{
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        background-color: white;
+        width:100%;
+        @include display-flex;
+        @include justify-content(space-around);
+        @include border-radius(3px);
+        padding: 2% 0;
+        @include flex-wrap(wrap);
+        @include mqXS{
+          margin: 0 8% 0 0;
+          padding: 3% 0 3% 10%;
+        }
+
+      }// end of bg
+}// end of nav
+
+&-footer{
+	padding-bottom: 3%;
+    background-color: white;
+}
+
+
+
+}
+
+
+
+.page-id-9, .page-template-product-kyoto,.page-template-product-tokyo,.page-template-news {
+  background-color: #eaedf2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

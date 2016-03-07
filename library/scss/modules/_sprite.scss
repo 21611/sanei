@@ -1,0 +1,29 @@
+  
+//@import "icons/*.png";
+$map: sprite-map("/icons/*.png", $spacing: 40px);
+$map-img: sprite-url($map);
+
+@mixin sprite-background($name, $text: false) {
+    display: inline-block; // block;
+    width: image-width(sprite-file($map, $name)) / 2;
+    height: image-height(sprite-file($map, $name)) / 2;
+    @include background(image-url("icons-s7c23ebbab3.png"));
+    background-repeat: no-repeat;
+    $pos: sprite-position($map, $name);
+    background-position: (nth($pos, 1) / 2) (nth($pos, 2) / 2);
+    @include background-size(ceil(image-width(sprite-path($map)) / 2) auto);
+
+    @if not $text {
+        vertical-align: top;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        font: 0/0 a;
+        text-shadow: none;
+        color: transparent;
+    }
+}
+
+
+@mixin sprite-position($name, $text: false) {
+    $pos: sprite-position($map, $name);
+    background-position: (nth($pos, 1) / 2) (nth($pos, 2) / 2 - 3);
+}

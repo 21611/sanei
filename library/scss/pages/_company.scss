@@ -1,0 +1,457 @@
+
+.company{
+  &-container{
+    @extend .m-all;
+    @extend .t-all;
+    @extend .d-all;
+    @extend .cf;
+    background-color: white;
+
+
+
+  }
+  &-top{
+ 
+    @include background(image-url("company-top.jpg"));
+    @include background-size(cover);
+    min-height: 380px;
+    background-position-y:-10px;
+    @include mqXS{
+      min-height: 250px;
+    }
+    @include mqLG{
+      background-position-y:-220px;
+    }
+
+    @include mqLG-more{
+      min-height: 300px;
+      background-position-y: -260px;
+    }
+
+    &__nav{
+     @include nav;
+     @include justify-content(flex-start);
+
+      &-logo{
+        @include nav-contents;
+        width: 60%;
+        margin-left: 5%;
+      }
+      &-img{
+        width: 180px;
+        height:55px;
+        @include mqXS{
+          width:100px;
+        }
+      }
+      &-link{
+        @include nav-contents;
+        @include mqXS{
+          width:45%;
+          text-align: center;
+
+        }
+          &:hover{
+       -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+          background-color: rgba(147, 198, 234, 0.87);
+          color:white;
+          padding:0 2%;
+          margin:0 2%;
+          
+        }
+
+      }
+      &-links{
+         @include nav;
+         width:30%;
+         @include mqXS{
+          width:60%;
+         }
+      }
+      &-bg{
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        background-color: white;
+        width:100%;
+        @include display-flex;
+        @include justify-content(space-around);
+        @include border-radius(3px);
+        padding: 2% 0;
+        @include flex-wrap(wrap);
+        @include mqXS{
+          margin: 0 8% 0 0;
+          padding: 3% 0 3% 10%;
+        }
+
+
+      }
+
+
+    }// end of nav
+  }// end of top
+  &-profile{
+    &__title{
+      &-ct{
+        @extend .title-default-ct;
+      }
+      &-en{
+        @extend .title-default-en;
+
+      }
+      &-jp{
+        @extend .title-default-jp;
+      }
+    }
+    &__left{
+      &-ct{
+      @extend .cf;
+      @extend .m-all;
+      @extend .t-1of2;
+      @extend .d-1of2;
+
+      padding-left: 20%;
+      color: $text;
+      @include mqXS{
+        padding-left:25%;
+      }
+      }
+
+      &-contents{
+        margin-bottom: 2%;
+        @extend .m-all;
+        @extend .t-all;
+        @extend .d-all;
+        @extend .cf;
+      }
+      &-ceo{
+        @extend .m-all;
+        @extend .t-all;
+        @extend .d-all;
+        @extend .cf;
+        margin-top: 15%;
+        font-weight: 200;
+        @include mqXS{
+        margin: 15% auto;
+        }
+        &-img{
+        @include border-radius(50%);
+        width:50%;
+        max-width: 150px;
+        }
+      }
+
+    }
+    &__right{
+      &-ct{
+      @extend .cf;
+      @extend .m-all;
+      @extend .t-1of2;
+      @extend .d-1of2;
+      color:$text;
+      padding-left: 5%;
+      }
+     &-article{
+    font-family: 'M+ 2p regular';
+     }
+     &-subtitle{
+    font-family: 'M+ 2p regular';
+ color:#93b8e5;
+     }
+    &-subtitlegift{
+    font-family: 'M+ 2p regular';
+ color:#ed8e8e;
+     }
+     &-text{
+      font-weight: 100;
+      padding:0 0 1% 0;
+     }
+     &-list{
+      margin:1% 0;
+      @include mqXS{
+        font-size: 14px;
+      }
+     }
+    }
+    &__article{
+
+      @extend .m-1of4;
+      @extend .t-1of4;
+      @extend .d-1of4;
+      @extend .cf;
+    font-family: 'M+ 2p regular';
+ color:black;
+    }
+    &__text{
+
+      @extend .m-3of4;
+      @extend .t-3of4;
+      @extend .d-3of4;
+      @extend .cf;
+      font-weight: 200;
+    }
+
+  }// end of profile
+  &-place{
+    @extend .cf;
+    @extend .m-all;
+    @extend .t-all;
+    @extend .d-all;
+    &__left{
+      &-ct{
+        background-color: $blue;
+        
+        @extend .cf;
+        @extend .m-all;
+        @extend .t-1of2;
+        @extend .d-1of2;
+      }
+
+    }
+    &__right{
+      &-ct{
+        background-color: $pink;
+
+        @extend .cf;
+        @extend .m-all;
+        @extend .t-1of2;
+        @extend .d-1of2;
+      }
+    }
+    &__box{
+      &-ct{
+      @extend .cf;
+      @extend .m-1of3;
+      @extend .t-1of3;
+      @extend .d-1of3;
+      padding: 5% 0 0 0;
+      text-align: center;
+
+      }
+      &-title{
+        font-size: 20px;
+        font-weight: 300;
+        font-family: "title3";
+
+      }
+      &-img{
+        width:90%;
+        max-width: 300px;
+      }
+    }
+    &__text{
+      &-ct{
+      @extend .cf;
+      @extend .m-2of3;
+      @extend .t-2of3;
+      @extend .d-2of3;
+      font-weight: 100;
+      padding: 3% 0 0 10%;
+      font-size: 16px;
+      min-height: 270px;
+      @include mqXS{
+        font-size: 14px;
+        min-height: 210px;
+      }
+      }
+      &-title{
+    font-family: 'M+ 2p regular';
+      color:black;
+      }
+
+    }
+  }
+  &-ceo{
+    &__ct{
+      @include background(image-url("statement-bg.jpg"));
+      @include background-size(cover);
+      @extend .m-all;
+      @extend .t-all;
+      @extend .d-all;
+      @extend .cf;
+      @include mqXS{
+      @include background(image-url("statement-bgxs.jpg"));
+      @include background-size(cover);
+      }
+    }
+    &__title{
+      &-ct{
+        @extend .title-default-jp;
+        width:70%;
+        background-color: rgba(243, 243, 243, 0.67);
+        text-align: center;
+        margin: 3% auto 6% auto;
+        @include border-radius(10px);
+        padding: 0 0 1% 0;
+
+      }
+      &-en{
+        @extend .title-default-en;
+
+      }
+      &-jp{
+        @extend .title-default-jp;
+        
+
+        @include mqXS{
+          font-size: 18px;
+        }
+      }
+    }
+    &__text{
+      color:white;
+      font-weight: 200;
+      margin: 0 15% 5% 15%;
+      letter-spacing: 2px;
+      line-height: 25px;
+      font-size: 20px;
+      @include mqXS{
+        margin: 0 5% 10% 5%;
+        font-size: 12px;
+      }
+      & p{
+        margin: 2% 0 0 0;
+      }
+    }
+
+  }
+  &-history{
+    &__ct{
+      @extend .m-all;
+      @extend .t-all;
+      @extend .d-all;
+      @extend .cf;
+      background-color: #f3f3f3;
+      &:after{
+
+      }
+    }
+    &__title{
+      &-ct{
+        @extend .title-default-ct;
+        background-color: #eaedf2;
+      }
+      &-en{
+        @extend .title-default-en;
+      }
+      &-jp{
+        @extend .title-default-jp;
+      }
+    }
+    &__box{
+      width:80%;
+      margin:0 auto;
+      @include mqXS{
+        width:95%;
+      }
+    }
+    &__heading{
+      @extend .table-default;
+      font-size: 0.9rem;
+      border-bottom: 1px dotted #000000;
+      @include mqXS{
+        min-width:140px;
+      }
+
+    }
+    &__data{
+      @extend .table-default;
+      font-size: 1.1rem;
+      border-bottom: 1px dotted #000000;
+      font-weight: 200;
+      width:80%;
+      @include mqXS{
+        width:100%;
+        font-size: 14px;
+      }
+
+    }
+
+  }// end of history
+
+
+
+
+}
+
+
+.footer-nav{
+  width:50%;
+  margin:0 auto;
+  @extend .cf;
+  @include mqXS{
+    width:90%;
+  }
+}
+.footer-icon{
+    &__top{
+    @include sprite-background("top");
+    &:hover{
+      @include sprite-background("top2");
+    }
+  }
+  &__company{
+    @include sprite-background("saney");
+    &:hover{
+      @include sprite-background("saney2");
+    }
+  }
+    &__gift{
+    @include sprite-background("gift");
+    &:hover{
+      @include sprite-background("gift2");
+    }
+  }
+    &__product{
+    @include sprite-background("product");
+    &:hover{
+      @include sprite-background("product2");
+    }
+  }
+    &__news{
+    @include sprite-background("news");
+    &:hover{
+      @include sprite-background("news2");
+    }
+  }
+}
+
+
+.footer{
+  &__ct{
+    @extend .cf;
+    clear: both;
+    padding: 5% 0 5% 0;
+    background-color: white;
+  }
+  &__text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+  }
+}
+.footer-icon__ct { 
+  
+  @extend .m-1of3;
+  @extend .t-1of5;
+  @extend .d-1of5;
+  text-align: center;
+  & a{
+    text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #98bee5;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    -webkit-transition: background-position 0.6s ease;
+    -moz-transition: background-position 0.6s ease;
+    -o-transition: background-position 0.6s ease;
+    transition: background-position 0.6s ease;
+  &:hover{
+    border: 2px solid darken( #98bee5, 10%);
+  }
+
+  }
+}

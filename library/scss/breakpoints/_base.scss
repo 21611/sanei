@@ -16,11 +16,13 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+ font-family: 'M+ 1p light';
 	font-size: 100%;
 	line-height: 1.5;
-	color: $text-color;
-	background-color: $gray;
+	color: $text;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -259,7 +261,15 @@ POSTS & CONTENT STYLES
 			background-color: $white;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+  border-radius:3px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+
+/* box-shadow */
+box-shadow:rgba(182, 186, 186, 0.2) 0px 0px 18px 5px;
+-webkit-box-shadow:rgba(182, 186, 186, 0.2) 0px 0px 18px 5px;
+-moz-box-shadow:rgba(182, 186, 186, 0.2) 0px 0px 18px 5px;
+
 
 			header {
 				border-bottom: 1px solid $light-gray;

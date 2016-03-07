@@ -25,6 +25,7 @@ body#tinymce.wp-editor {
 	// typography
 	@import "partials/typography";
 
+
 	// Sass functions
 	@import "partials/functions";
 
@@ -47,7 +48,7 @@ body#tinymce.wp-editor {
 
 		/* on hover */
 		&:hover, &:focus {
-			color: $link-hover;
+			
 		}
 
 		/* on click */
@@ -74,7 +75,7 @@ body#tinymce.wp-editor {
 	}
 
 	h1, .h1 {
-		font-size: 2.5em;
+		font-size: 2em;
 		line-height: 1.333em;
 	}
 

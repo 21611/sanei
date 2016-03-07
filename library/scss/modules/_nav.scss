@@ -1,0 +1,26 @@
+@mixin nav{
+  @include display-flex;
+  @include flex-direction(row);
+  @include justify-content(flex-end);
+}
+
+@mixin nav-contents{
+    @include display-flex(inline-flex);
+    @include align-items(center);
+
+  
+	& a, a:visited{
+		font-family: "title-thin";
+		text-decoration: none;
+		color: black;
+		font-size: 18px;
+		font-weight: 100;
+		@include mqXS{
+			font-size: 14px;
+		}
+		& a:hover{
+			background-color: red;
+		}
+	}
+  }
+

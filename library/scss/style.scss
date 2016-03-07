@@ -61,17 +61,35 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 // forms (inputs & labels)
 @import "modules/forms";
 
+//nav
+@import "modules/nav";
+@import "modules/table";
+@import "modules/title";
+@import "modules/sprite";
+
+@import "mediaqueries";
+
+
+
+//vender
+// 37. animated grid
+$item_width: 300px;
+$sidebar_width: 0px;
+$color_primary: #f5f5f5;
+$color_secondary: #fff;
+$color_link: #81c483;
+$anim-time: 0.5s;
+@import "vender/base_ag";
+@import "vender/mediaqueries_ag";
+
+
 
 
 //custamize
-@import "partials/top";
-
-
-
-
-
-
-
+@import "pages/top";
+@import "pages/company";
+@import "pages/product-tokyo";
+@import "pages/news";
 
 
 /*********************

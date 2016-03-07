@@ -244,4 +244,28 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
-/* DON'T DELETE THIS CLOSING TAG */ ?>
+/* DON'T DELETE THIS CLOSING TAG */ 
+
+
+
+
+
+function catch_that_image() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches [1] [0];
+  if(empty($first_img)){
+    $first_img = "/images/default.jpg";
+  }
+  return $first_img;
+}
+
+
+
+
+
+
+?>
